@@ -1,10 +1,10 @@
-FROM alpine:3.12
+FROM arm64v8/python:3.8-alpine3.12
 LABEL AUTHOR="none" \
         VERSION=0.1.3
 
 ENV DEFAULT_LIST_FILE=crontab_list.sh \
         CUSTOM_LIST_MERGE_TYPE=append \
-        REPO_URL=https://gitee.com/lxk0301/jd_scripts.git
+        REPO_URL=https://github.com/necan/jd_scripts.git
 
 RUN set -ex \
         && apk update && apk upgrade\
